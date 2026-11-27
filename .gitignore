@@ -1,0 +1,50 @@
+# Dependencies
+node_modules/
+
+# Production & standalone offline build outputs
+# Publish dist-offline/local-sanitizer-offline.html via GitHub Releases instead of committing it to git
+dist/
+dist-offline/
+local-sanitizer-offline.html
+*.offline.html
+
+# Test reports, traces & coverage
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+coverage/
+
+# Real secrets, local env files & exported mapping key files
+# (Synthetic test fixtures in tests/fixtures/ are explicitly allow-listed below)
+.env
+.env.*
+*.pem
+*.key
+*_key_map.json
+*_sanitized.*
+*_restored.*
+*.log
+!tests/fixtures/sample-config.env
+!tests/fixtures/sample-app.log
+
+# Internal planning docs, agent notes & market research (keep out of public OSS repo)
+AGENTS.md
+PRD-*.md
+*-market-research.md
+ai-data-sanitization-market-research.md
+
+# Local AI agent skill directories & caches
+.agents/
+.agent/
+.claude/
+.cursor/
+.gemini/
+
+# OS & IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo

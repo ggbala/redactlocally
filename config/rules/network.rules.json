@@ -1,0 +1,41 @@
+[
+  {
+    "id": "ipv4",
+    "category": "network",
+    "label": "IPv4 Address",
+    "description": "Valid dotted-quad IPv4 addresses while excluding version strings such as v1.2.3.4.",
+    "placeholderPrefix": "IP",
+    "pattern": "(?<![A-Za-z0-9._-])(?:(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)\\.){3}(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)(?![A-Za-z0-9._-])",
+    "flags": "g",
+    "priority": 70,
+    "validator": null,
+    "enabledByDefault": true,
+    "sampleMatch": "192.168.1.42"
+  },
+  {
+    "id": "ipv6",
+    "category": "network",
+    "label": "IPv6 Address",
+    "description": "Full 8-group, compressed (::), and IPv4-mapped IPv6 addresses while excluding C++/Rust scope operators like ::add or std::vector.",
+    "placeholderPrefix": "IPV6",
+    "pattern": "(?<![A-Za-z0-9:])(?:(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}|::(?:[fF]{4}(?::0{1,4})?:)?(?:(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)\\.){3}(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]?\\d)|(?:[0-9a-fA-F]{1,4}:){2,6}:[0-9a-fA-F]{1,4}(?::[0-9a-fA-F]{1,4}){0,4}|[0-9a-fA-F]{1,4}::[0-9a-fA-F]{1,4}(?::[0-9a-fA-F]{1,4}){1,5}|::(?:[0-9a-fA-F]{1,4}:){1,6}[0-9a-fA-F]{1,4}|(?:[0-9a-fA-F]{1,4}:){2,7}:|(?:[0-9a-fA-F]{0,3}\\d[0-9a-fA-F]{0,3})::(?:[0-9a-fA-F]{0,3}\\d[0-9a-fA-F]{0,3})|::1)(?![A-Za-z0-9:.])",
+    "flags": "g",
+    "priority": 72,
+    "validator": null,
+    "enabledByDefault": true,
+    "sampleMatch": "2001:0db8:85a3:0000:0000:8a2e:0370:7334"
+  },
+  {
+    "id": "mac_address",
+    "category": "network",
+    "label": "MAC Address",
+    "description": "Network interface MAC addresses in colon- or hyphen-delimited hex notation.",
+    "placeholderPrefix": "MAC",
+    "pattern": "(?<![A-Za-z0-9:-])(?:(?:[0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}|(?:[0-9A-Fa-f]{2}-){5}[0-9A-Fa-f]{2})(?![A-Za-z0-9:-])",
+    "flags": "g",
+    "priority": 72,
+    "validator": null,
+    "enabledByDefault": true,
+    "sampleMatch": "00:1A:2B:3C:4D:5E"
+  }
+]

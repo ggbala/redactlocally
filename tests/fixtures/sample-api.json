@@ -1,0 +1,18 @@
+{
+  "service": "billing-api",
+  "version": "v1.2.3.4",
+  "owner": {
+    "email": "devops@acme-corp.com",
+    "phone": "+1-415-555-0199"
+  },
+  "credentials": {
+    "openaiKey": "sk-proj-aBcDeFgHiJkLmNoPqRsTuVwXyZ0123456789",
+    "awsAccessKey": "AKIAIOSFODNN7EXAMPLE",
+    "stripeKey": "pk_test_51NxYzAbCdEfGhIjKlMnOpQrStUvWx",
+    "password": "ProdDBPassword!2026"
+  },
+  "network": {
+    "primaryHost": "10.24.18.9",
+    "databaseUri": "postgres://admin:Sup3rS3cret@10.24.18.9:5432/billing_prod"
+  }
+}

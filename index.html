@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RedactLocally — Free Local PII &amp; Document Anonymizer for ChatGPT &amp; AI</title>
+    <meta
+      name="description"
+      content="100% offline, open-source tool to anonymize text, code, Excel, and Word documents before pasting into ChatGPT or Claude. Zero server uploads. Reversible placeholders."
+    />
+    <link rel="canonical" href="https://redactlocally.com/" />
+    <meta property="og:title" content="RedactLocally — Local Offline AI Data Sanitizer" />
+    <meta
+      property="og:description"
+      content="Scrub PII, API keys, and sensitive Excel/Word data locally in your browser before using AI — then restore replies in one click."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://redactlocally.com/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "RedactLocally",
+        "applicationCategory": "SecurityApplication",
+        "operatingSystem": "Web Browser (Offline Capable)",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "license": "https://opensource.org/licenses/MIT",
+        "url": "https://redactlocally.com/",
+        "description": "100% local, offline, open-source tool to anonymize text, code, Excel, and Word documents before pasting into ChatGPT, Claude, or Gemini with reversible placeholders."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I anonymize text before pasting into ChatGPT or Claude?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In Text Sanitizer mode, paste your original prompt, email, or notes on the left and click Sanitize. Sensitive values are replaced locally with consistent numbered placeholders like [EMAIL_1] or [PHONE_1]. Copy the cleaned text to ChatGPT or Claude, then click Restore AI Reply to swap placeholders back to your real values using the active in-memory map."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this free online PII redaction tool truly private? Does any data touch a server?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. All detection, document parsing, and restoration run 100% client-side inside your browser with zero outbound network requests. The full codebase is open source under the MIT License on GitHub, and you can also download the standalone single-file offline HTML build."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I sanitize code and scrub API keys, tokens, or secrets from logs before asking AI to debug?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Built-in rules detect OpenAI, Anthropic, AWS keys, GitHub tokens, Stripe keys, Slack tokens, Google Cloud API keys, JWTs, PEM private keys, database connection URIs, Bearer tokens, .env passwords, and IPv4/IPv6/MAC addresses across pasted snippets and uploaded code or config files."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I anonymize Word (.docx) or Excel (.xlsx / .csv) documents for AI without breaking formulas or layout?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Switch to Document Sanitizer and drop your .xlsx, .csv, or .docx file. Excel spreadsheets keep formulas, column widths, and sheets intact. Word documents merge split XML text runs while preserving tables, headers, footers, and styles, plus optional metadata stripping. Upload the AI output to restore values with a verification diff."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why use an offline web tool instead of a Chrome extension to redact PII in ChatGPT?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "This tool requires zero browser permissions, zero installation, is 100% open source, works with any AI provider, supports roundtrip Excel and Word document restoration, and can run from a standalone offline HTML file."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where are my restoration mapping tables stored, and can I back them up or delete them?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Text Mode mappings exist strictly in browser memory and overwrite on each run. Document Mode mappings auto-save to local browser IndexedDB bound to the original filename, with one-click .json key export and vault clearing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does this tool support PDF redaction?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "RedactLocally currently focuses on reversible sanitization for text, code, Excel (.xlsx, .xls, .csv), and Word (.docx). True PDF redaction is planned for an upcoming release."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I scan an entire local folder or code repository to find secrets and PII without modifying any files?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Switch to the Directory Scanner tab and select or drag and drop any local folder. RedactLocally recursively scans code, configs, Excel, Word, and text files strictly in read-only mode, highlighting every secret or PII finding by file path, line number, sheet cell, or paragraph without modifying any files."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I redact company-specific names or project codenames that standard regex cannot detect?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Open the Rules drawer in the top-right corner to add exact custom keywords or custom regular expressions with your own placeholder prefix. The architecture also reserves a plugin seam for future local NER models."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="bg-[#FAFAFB] text-[#111827] antialiased">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+Meeting Notes — Q3 Payroll Review
+Lead contact: alice.smith@acme-corp.com (Phone: +1-415-555-0199)
+Backup contact: bob.jones@acme-corp.com
+Taxpayer reference SSN: 123-45-6789
+Wire account IBAN: DE89 3704 0044 0532 0130 00
+Please keep release v1.2.3.4 unchanged.

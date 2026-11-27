@@ -1,0 +1,4 @@
+Client Name,Primary Email,Phone,IBAN,Notes
+"Smith, Alice",alice.smith@acme-corp.com,+1-415-555-0199,DE89 3704 0044 0532 0130 00,"Priority Q3 client, café & Zürich office"
+"Müller, Jürgen",jurgen.muller@berlin-ag.de,+49 30 901820,GB29 NWBK 6016 1331 9268 19,"Secondary contact: alice.smith@acme-corp.com"
+"O'Connor, Liam",liam@dublin-fin.ie,(415) 555-0142,NL91 ABNA 0417 1643 00,"Quarterly audit, no issues"
